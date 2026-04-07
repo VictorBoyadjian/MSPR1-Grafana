@@ -1,6 +1,7 @@
 #!/bin/sh
-# Railway injecte dynamiquement la variable PORT.
-# GF_SERVER_HTTP_PORT permet de surcharger le port d'écoute de Grafana.
 export GF_SERVER_HTTP_PORT="${PORT:-3000}"
+export GF_SECURITY_ADMIN_USER="${GF_SECURITY_ADMIN_USER:-test}"
+export GF_SECURITY_ADMIN_PASSWORD="${GF_SECURITY_ADMIN_PASSWORD:-testtest}"
+export GF_SECURITY_ADMIN_EMAIL="${GF_SECURITY_ADMIN_EMAIL:-test@test.com}"
 
 exec /run.sh
